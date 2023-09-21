@@ -1,0 +1,272 @@
+.operation-with-balance {
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: height .25s, padding .25s;
+
+  &__content {
+    display: grid;
+    grid-template-columns: .665fr 1fr;
+    align-items: center;
+    padding: 17px;
+    row-gap: 10px;
+    cursor: pointer;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    & > svg {
+      transition: .25s;
+
+      &.active {
+        transform: rotate(90deg);
+        transition: .25s;
+
+        & path {
+          fill: #FF6100;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+
+    & > div {
+      &:first-child {
+        margin-right: 40px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 63px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+
+    &.row {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      color: #4B535A;
+
+      &.method {
+        width: 110px;
+      }
+
+      &.big {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+
+    &-status {
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+      font-weight: 600;
+      line-height: 18px;
+      color: #262626;
+
+      &_ml-3 {
+        margin-left: 3px;
+      }
+
+      &_ml-9 {
+        margin-left: 9px;
+      }
+
+      &_ml-12 {
+        margin-left: 12px;
+      }
+
+      &.successfully {
+        color: #4F9F2A;
+      }
+
+      &.canceled {
+        color: #FF6100;
+      }
+    }
+
+    &-icons {
+      display: flex;
+      align-items: center;
+      column-gap: 11px;
+
+      & > svg {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 7px 52px 25px;
+  }
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: all .25s ease-in-out;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  padding: 0;
+  height: 0;
+}
+
+@media screen and (min-width: 801px) and (max-width: 900px) {
+  .operation-with-balance {
+    &__dropdown {
+      padding: 7px 42px 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 867px) {
+  .operation-with-balance {
+    &__right {
+      & > div {
+        &:first-child {
+          margin-right: 20px;
+        }
+
+        &:nth-child(2) {
+          margin-right: 43px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 602px) {
+  .operation-with-balance {
+    &__right {
+      & > div {
+        &:first-child {
+          margin-right: 20px;
+        }
+
+        &:nth-child(2) {
+          margin-right: 43px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .operation-with-balance {
+    &__dropdown {
+      padding: 7px 32px 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .operation-with-balance {
+    &__content {
+      grid-template-columns: 1fr;
+    }
+
+    &__right {
+      justify-content: space-between;
+
+      & > div {
+        margin: 0 !important;
+      }
+    }
+
+    &__info {
+      &-status {
+        margin-right: auto !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .operation-with-balance {
+    &__dropdown {
+      padding: 7px 20px 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .operation-with-balance {
+    &__info {
+      &.row {
+        flex-direction: column;
+      }
+    }
+
+    &__dropdown {
+
+      & .operation-with-balance {
+        &__info {
+          &-status {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .operation-with-balance {
+    &__info {
+      &-status {
+        flex-direction: column;
+        row-gap: 5px;
+        word-break: break-word;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .operation-with-balance {
+    &__left {
+      flex-direction: column;
+      row-gap: 8px;
+    }
+
+    &__info {
+      align-items: center;
+
+      &-status {
+        margin: 0 auto;
+      }
+    }
+
+    &__right {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 8px;
+
+      & > div {
+        align-items: center;
+      }
+    }
+  }
+}

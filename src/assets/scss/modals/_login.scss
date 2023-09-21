@@ -1,0 +1,25 @@
+.modal {
+  &__button {
+    margin: 0 auto;
+
+    &_mt-20 {
+      margin-top: 20px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    &_mt-20 {
+      margin-top: 20px;
+    }
+
+    & > .button {
+      max-width: 100% !important;
+      width: 100%;
+    }
+  }
+}

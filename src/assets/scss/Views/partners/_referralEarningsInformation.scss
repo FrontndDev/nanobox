@@ -1,0 +1,122 @@
+.referral-earnings-information {
+  padding: 30px 28px 30px 30px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+
+  &__content {
+    display: flex;
+    row-gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+
+    &:not(:first-child) {
+      padding-left: 30px;
+    }
+
+    &:not(:last-child) {
+      padding-right: 25px;
+      border-right: 1px solid #D4DAFD;
+    }
+
+    &-title {
+      max-width: 158px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #141725;
+    }
+
+    &-income {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 38px;
+      letter-spacing: -0.0375em;
+
+      &.blue {
+        color: #0462D0;
+      }
+
+      &.green {
+        color: #4F9F2A;
+      }
+
+      &.orange {
+        color: #FF6100;
+      }
+
+      &.turquoise {
+        font-weight: 900;
+        color: #24C8BC;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1033px) {
+  .referral-earnings-information {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      &:nth-child(2) {
+        margin-left: auto;
+        border: none;
+      }
+
+      &:nth-child(3) {
+        padding-left: 0;
+      }
+
+      &:nth-child(4) {
+        margin-left: auto;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .referral-earnings-information {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      &:nth-child(2) {
+        margin-left: auto;
+        border: none;
+      }
+
+      &:nth-child(3) {
+        padding-left: 0;
+      }
+
+      &:nth-child(4) {
+        margin-left: auto;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .referral-earnings-information {
+    &__content {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      border: none !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+      text-align: center;
+    }
+  }
+}

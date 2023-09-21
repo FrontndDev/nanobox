@@ -1,0 +1,66 @@
+.input-tel {
+  position: relative;
+
+  &__select {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    z-index: 1;
+
+    &-selected {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      line-height: 20px;
+      cursor: pointer;
+
+      & > svg {
+        transition: .25s;
+
+        &.active > path {
+          fill: #FF6100;
+          transition: .25s;
+        }
+      }
+    }
+
+    &-arrow {
+      margin-left: 9px;
+      position: relative;
+      z-index: 3;
+    }
+
+    &-dropdown {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      padding: 4px 6px;
+      width: 100px;
+      max-height: 168px;
+      overflow: auto;
+      background: #FFFFFF;
+      box-shadow: 0 16px 24px rgba(20, 23, 37, 0.16);
+      border-radius: 12px;
+      position: absolute;
+      top: 38px;
+      left: -12px;
+      right: 0;
+
+      &-item {
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        line-height: 20px;
+        color: #262626;
+        transition: .25s;
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+          background: #F5F5F5;
+          transition: .25s;
+        }
+      }
+    }
+  }
+}

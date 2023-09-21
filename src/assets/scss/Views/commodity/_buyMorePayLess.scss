@@ -1,0 +1,13 @@
+.products {
+  margin: 82px 0 65px;
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 11px;
+
+    &_mt-56 {
+      margin-top: 56px;
+    }
+  }
+}

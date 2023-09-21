@@ -1,0 +1,50 @@
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 200px;
+
+  & > svg {
+    width: 14.4px;
+    height: 8px;
+  }
+
+  &.big {
+    width: 55px;
+    height: 55px;
+
+    & > svg {
+      width: 16px;
+      height: 9px;
+    }
+  }
+
+  &.prev {
+    transform: rotateZ(90deg);
+    left: -20px;
+  }
+
+  &.next {
+    transform: rotateZ(-90deg);
+    right: -20px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .slider-button {
+    &.prev {
+      left: -5px;
+    }
+
+    &.next {
+      right: -5px;
+    }
+  }
+}

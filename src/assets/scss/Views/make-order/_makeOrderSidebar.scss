@@ -1,0 +1,78 @@
+.make-order-sidebar {
+  padding: 30px;
+  width: 370px;
+  height: fit-content;
+  background: #FFFFFF;
+  border-radius: 12px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 10px;
+    padding-bottom: 24px;
+
+    &_mt-28 {
+      margin-top: 28px;
+    }
+
+    &_mt-24 {
+      margin-top: 24px;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      & > span {
+        &:first-child {
+          font-weight: 600;
+          line-height: 20px;
+          color: #4B535A;
+        }
+
+        &:not([class]):nth-child(2) {
+          font-weight: 700;
+          line-height: 20px;
+        }
+      }
+
+      &-price {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 48px;
+  }
+
+  &__terms-of-agreement {
+    &_mt-24 {
+      margin-top: 24px;
+    }
+
+    & > p,
+    & a {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+    }
+
+    & a {
+      color: #FF6100;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .make-order-sidebar {
+    width: 100%;
+  }
+}

@@ -1,0 +1,154 @@
+<template>
+  <div class="referral-link">
+    <div class="referral-link__header">
+      <div class="referral-link__title">Ваша реферральная ссылка</div>
+      <div class="referral-link__link-transitions">Переходов по ссылке: <span>3,345</span></div>
+    </div>
+
+    <div class="referral-link__link referral-link__link_mt-8">
+      <span>{{ getReferralLink }}</span>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" @click="copy">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5013 1.66667C7.05927 1.66667 6.63535 1.84227 6.32279 2.15483C6.01023 2.46739 5.83463 2.89131 5.83463 3.33334V4.16667C5.83463 4.38769 5.92243 4.59965 6.07871 4.75593C6.23499 4.91221 6.44695 5 6.66797 5C6.88898 5 7.10094 4.91221 7.25722 4.75593C7.4135 4.59965 7.5013 4.38769 7.5013 4.16667V3.33334H8.33463C8.55565 3.33334 8.76761 3.24554 8.92389 3.08926C9.08017 2.93298 9.16797 2.72102 9.16797 2.5C9.16797 2.27899 9.08017 2.06703 8.92389 1.91075C8.76761 1.75447 8.55565 1.66667 8.33463 1.66667H7.5013ZM11.668 1.66667C11.447 1.66667 11.235 1.75447 11.0787 1.91075C10.9224 2.06703 10.8346 2.27899 10.8346 2.5C10.8346 2.72102 10.9224 2.93298 11.0787 3.08926C11.235 3.24554 11.447 3.33334 11.668 3.33334H12.5013C12.7223 3.33334 12.9343 3.24554 13.0906 3.08926C13.2468 2.93298 13.3346 2.72102 13.3346 2.5C13.3346 2.27899 13.2468 2.06703 13.0906 1.91075C12.9343 1.75447 12.7223 1.66667 12.5013 1.66667H11.668ZM15.8346 1.66667C15.6136 1.66667 15.4017 1.75447 15.2454 1.91075C15.0891 2.06703 15.0013 2.27899 15.0013 2.5C15.0013 2.72102 15.0891 2.93298 15.2454 3.08926C15.4017 3.24554 15.6136 3.33334 15.8346 3.33334H16.668V4.16667C16.668 4.38769 16.7558 4.59965 16.912 4.75593C17.0683 4.91221 17.2803 5 17.5013 5C17.7223 5 17.9343 4.91221 18.0906 4.75593C18.2468 4.59965 18.3346 4.38769 18.3346 4.16667V3.33334C18.3346 2.89131 18.159 2.46739 17.8465 2.15483C17.5339 1.84227 17.11 1.66667 16.668 1.66667H15.8346ZM18.3346 7.5C18.3346 7.27899 18.2468 7.06703 18.0906 6.91075C17.9343 6.75447 17.7223 6.66667 17.5013 6.66667C17.2803 6.66667 17.0683 6.75447 16.912 6.91075C16.7558 7.06703 16.668 7.27899 16.668 7.5V8.33334C16.668 8.55435 16.7558 8.76631 16.912 8.92259C17.0683 9.07887 17.2803 9.16667 17.5013 9.16667C17.7223 9.16667 17.9343 9.07887 18.0906 8.92259C18.2468 8.76631 18.3346 8.55435 18.3346 8.33334V7.5ZM18.3346 11.6667C18.3346 11.4457 18.2468 11.2337 18.0906 11.0774C17.9343 10.9211 17.7223 10.8333 17.5013 10.8333C17.2803 10.8333 17.0683 10.9211 16.912 11.0774C16.7558 11.2337 16.668 11.4457 16.668 11.6667V12.5H15.8346C15.6136 12.5 15.4017 12.5878 15.2454 12.7441C15.0891 12.9004 15.0013 13.1123 15.0013 13.3333C15.0013 13.5543 15.0891 13.7663 15.2454 13.9226C15.4017 14.0789 15.6136 14.1667 15.8346 14.1667H16.668C17.11 14.1667 17.5339 13.9911 17.8465 13.6785C18.159 13.366 18.3346 12.942 18.3346 12.5V11.6667ZM3.33464 5.83334C2.89261 5.83334 2.46868 6.00893 2.15612 6.32149C1.84356 6.63405 1.66797 7.05798 1.66797 7.5V16.6667C1.66797 17.1087 1.84356 17.5326 2.15612 17.8452C2.46868 18.1577 2.89261 18.3333 3.33464 18.3333H12.5013C12.9433 18.3333 13.3673 18.1577 13.6798 17.8452C13.9924 17.5326 14.168 17.1087 14.168 16.6667V7.5C14.168 7.05798 13.9924 6.63405 13.6798 6.32149C13.3673 6.00893 12.9433 5.83334 12.5013 5.83334H3.33464ZM3.33464 7.5H12.5013V16.6667H3.33464V7.5Z" fill="#FF6100"/>
+      </svg>
+    </div>
+
+    <div class="referral-link__info referral-link__info_mt-24">
+      <div class="referral-link__info-item">
+        <div class="referral-link__info-item-percent">15%</div>
+        <div class="referral-link__info-item-description">Доход от рефералов 1й линии</div>
+      </div>
+      <div class="referral-link__info-item">
+        <div class="referral-link__info-item-percent">10%</div>
+        <div class="referral-link__info-item-description">Доход от рефералов 2й линии</div>
+      </div>
+      <div class="referral-link__info-item">
+        <div class="referral-link__info-item-percent">5%</div>
+        <div class="referral-link__info-item-description">Доход от рефералов 3й линии</div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import {mapState} from "vuex";
+
+export default {
+  name: "ReferralLink",
+  methods: {
+    copy() {
+      navigator.clipboard.writeText(this.getReferralLink)
+    }
+  },
+  computed: {
+    ...mapState('auth', ['user']),
+
+    getReferralLink() {
+      return `${window.location.origin}/?referral_token=${this.user.referal_token}`
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.referral-link {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__link-transitions {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+
+    & > span {
+      font-weight: 900;
+      font-size: 14px;
+      line-height: 19px;
+      color: #24C8BC;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+    padding: 14px 16px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+
+    font-weight: 600;
+    line-height: 19px;
+
+    &_mt-8 {
+      margin-top: 8px;
+    }
+
+    & > span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & > svg {
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 15px 20px;
+
+    &_mt-24 {
+      margin-top: 24px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 7px;
+      max-width: 135px;
+
+      &-percent {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 18px;
+        color: #24C8BC;
+      }
+
+      &-description {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: #4B535A;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .referral-link {
+    &__info {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+</style>

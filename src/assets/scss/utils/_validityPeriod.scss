@@ -1,0 +1,45 @@
+.validity-period {
+  &__title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+
+    &_mb-8 {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    padding: 10px 18px;
+    width: 110px;
+    height: fit-content;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    border-radius: 10px;
+
+    & > input {
+      width: 17px;
+      background: transparent;
+
+      &::placeholder {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: #9DA0AF;
+      }
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+
+    & > span {
+      margin: 0 17px 0 18px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+  }
+}

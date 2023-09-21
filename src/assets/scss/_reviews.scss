@@ -1,0 +1,42 @@
+.reviews {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    &_mt-60 {
+      margin-top: 60px;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: 56px;
+
+    &_mt-16 {
+      margin-top: 16px;
+    }
+  }
+
+  &__pagination {
+    &_mt-60 {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .reviews {
+    &__body {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .reviews {
+    &__body {
+      grid-template-columns: 1fr;
+    }
+  }
+}

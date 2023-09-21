@@ -1,0 +1,33 @@
+.textarea {
+  &__title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+
+    &_mb-8 {
+      margin-bottom: 8px;
+    }
+  }
+
+  & > textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    border-radius: 10px;
+
+    font-weight: 400;
+    line-height: 20px;
+    transition: .25s;
+
+    &::placeholder {
+      font-weight: 600;
+      color: #9DA0AF;
+    }
+
+    &:focus {
+      border: 1px solid #24C8BC;
+      transition: .25s;
+    }
+  }
+}

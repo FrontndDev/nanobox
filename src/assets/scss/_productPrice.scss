@@ -1,0 +1,39 @@
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: #FFFFFF;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    color: #24C8BC;
+    text-align: start;
+  }
+
+  &__old-price {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4B535A;
+    text-align: start;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 16px;
+  }
+}

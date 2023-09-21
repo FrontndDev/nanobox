@@ -1,0 +1,43 @@
+.my-orders {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    &_mt-30 {
+      margin-top: 30px;
+    }
+  }
+
+  &__icon {
+    margin-top: 88px;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .my-orders {
+    &__header {
+      & > .input {
+        width: 100% !important;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      & > .button2 {
+        max-width: 100% !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+.income-information {
+  padding: 30px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    row-gap: 25px;
+  }
+
+  &__item {
+    &:first-child {
+      padding-right: 30px;
+    }
+
+    &:not(:first-child) {
+      padding-left: 30px;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid #E0E1E6;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      font-weight: 600;
+      line-height: 18px;
+      color: #262626;
+    }
+
+    &-value {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 38px;
+      letter-spacing: -0.0375em;
+
+      &_mt-10 {
+        margin-top: 10px;
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #4B535A;
+
+      &_mt-4 {
+        margin-top: 4px;
+      }
+
+      &-value {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    &.purchases {
+      & .income-information {
+        &__item {
+          &-value {
+            color: #4F9F2A;
+          }
+
+          &-info {
+            &-value {
+              color: #4F9F2A;
+            }
+          }
+        }
+      }
+    }
+
+    &.partnership-turnover {
+      & .income-information {
+        &__item {
+          &-value {
+            color: #FF6100;
+          }
+
+          &-info {
+            &-value {
+              color: #FF6100;
+            }
+          }
+        }
+      }
+    }
+
+    &.count-of-partners {
+
+      & .income-information {
+        &__item {
+          &-value {
+            color: #24C8BC;
+          }
+
+          &-info {
+            &-value {
+              color: #24C8BC;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1050px) {
+  .income-information {
+    &__content {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "first second"
+        "third third";
+    }
+
+    &__item {
+      &.purchases,
+      &.partnership-turnover,
+      &.count-of-partners {
+        padding: 0;
+        border: none;
+      }
+
+      &.purchases {
+        grid-area: first;
+        margin-right: auto;
+      }
+
+      &.partnership-turnover {
+        grid-area: second;
+        margin-left: auto;
+      }
+
+      &.count-of-partners {
+        grid-area: third;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 475px) and (max-width: 750px) {
+  .income-information {
+    &__content {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "first second"
+        "third third";
+    }
+
+    &__item {
+      &.purchases,
+      &.partnership-turnover,
+      &.count-of-partners {
+        width: fit-content;
+        padding: 0;
+        border: none;
+      }
+
+      &.purchases {
+        grid-area: first;
+        margin-right: auto;
+      }
+
+      &.partnership-turnover {
+        grid-area: second;
+        margin-left: auto;
+      }
+
+      &.count-of-partners {
+        grid-area: third;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .income-information {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        padding: 0 0 30px 0;
+        border-right: none;
+        border-bottom: 1px solid #E0E1E6;
+      }
+
+      &:last-child {
+        padding: 0;
+      }
+
+      &-title {
+        justify-content: center;
+      }
+    }
+  }
+}

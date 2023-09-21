@@ -1,0 +1,45 @@
+.arrow-button {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+
+    & span {
+      &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #FF8830;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  & span {
+    font-weight: 600;
+    line-height: 20px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FF8830;
+    position: relative;
+  }
+
+  &.left {
+    flex-direction: row-reverse;
+    column-gap: 11px;
+
+    & > svg {
+      transform: rotateZ(90deg);
+    }
+  }
+
+  &.right {
+    column-gap: 9px;
+
+    & > svg {
+      transform: rotateZ(-90deg);
+    }
+  }
+}

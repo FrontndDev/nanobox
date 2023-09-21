@@ -1,0 +1,63 @@
+.doctor-header {
+  padding: 40px 0 100px;
+  background-image: url("@/assets/images/specialists-services-big.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(98.65deg, #FFFFFF 1.99%, rgba(255, 255, 255, 0) 92.46%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__logo {
+    width: 240px;
+  }
+
+  &__body {
+    max-width: 570px;
+    width: 100%;
+
+    &_mt-80 {
+      margin-top: 80px;
+    }
+  }
+
+  &__title {
+    &_mt-24 {
+      margin-top: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4B535A;
+
+    &_mt-40 {
+      margin-top: 40px;
+    }
+
+    & li {
+      display: flex;
+
+      &::before {
+        content: '●';
+        color: #4B535A;
+        padding-right: 10px;
+      }
+    }
+  }
+}

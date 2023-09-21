@@ -1,0 +1,99 @@
+.article-sidebar {
+  flex-shrink: 0;
+  width: 360px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+
+    &_pl-12 {
+      padding-left: 12px;
+    }
+
+    &_mb-25 {
+      margin-bottom: 25px;
+    }
+
+    &_mb-16 {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__text {
+    padding: 9px 12px 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4B535A;
+    cursor: pointer;
+
+    &.active {
+      padding: 8px 12px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: #FF6100;
+    }
+
+    &_mb-25 {
+      margin-bottom: 25px;
+    }
+
+    &_my {
+      margin: 16px 0 17px;
+    }
+  }
+
+  &__line {
+    margin: 32px 0 22px;
+    height: 1px;
+    background: #DFDFDF;
+  }
+
+  &__networks {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    padding-left: 12px;
+
+    &_mb-40 {
+      margin-bottom: 40px;
+    }
+  }
+
+  & ::v-deep {
+    & .specialist-services {
+      height: fit-content;
+      background-image: url("@/assets/images/specialists-services-big.png");
+      background-position: center;
+
+      &__body {
+        padding: 30px 50px 30px 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .article-sidebar {
+    flex-shrink: unset;
+    width: 100%;
+
+    &__title {
+      & > br {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.our-doctors {
+  margin-top: 80px;
+
+  &_mt-40 {
+    margin-top: 40px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+
+    &_mt-82 {
+      margin-top: 82px;
+    }
+  }
+}

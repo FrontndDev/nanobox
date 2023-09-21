@@ -1,0 +1,135 @@
+.make-order {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #262626;
+
+    &_mt-25 {
+      margin-top: 25px;
+    }
+
+    &_mb-26 {
+      margin-bottom: 26px;
+    }
+
+    &_mb-24 {
+      margin-bottom: 24px;
+    }
+
+    & > span {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      color: #4B535A;
+
+      & > span {
+        padding-left: 8px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #262626;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    &_mt-42 {
+      margin-top: 42px;
+    }
+  }
+
+  &__content {
+    width: 740px;
+  }
+
+  &__payment {
+    display: flex;
+    flex-direction: column;
+    //row-gap: 24px;
+    padding-bottom: 22px;
+
+    &-method {
+      &-1 {
+        order: 1;
+      }
+
+      &-2 {
+        margin-top: 24px;
+        order: 2;
+      }
+
+      &-3 {
+        margin-top: 24px;
+        order: 3;
+      }
+
+      &.text {
+        margin-top: 16px;
+        padding-left: 32px;
+        font-weight: 600;
+        line-height: 20px;
+        color: #4B535A;
+        order: 1;
+      }
+
+      &.card {
+        margin-top: 16px;
+        order: 2;
+      }
+
+      &.cryptocurrency {
+        margin-top: 16px;
+        order: 3;
+      }
+    }
+  }
+
+  &__delivery {
+    padding-bottom: 24px;
+  }
+
+
+  &__recipient-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+::v-deep {
+  & .table {
+    &__content {
+      border-top: none;
+
+      &_py {
+        padding: 0 0 27px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .make-order {
+    &__content {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .make-order {
+    &__recipient-data {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.useful-materials {
+  margin-top: 83px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+
+    &_mb-42 {
+      margin-bottom: 42px;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 623px) {
+  .useful-materials {
+    &__title {
+      &-right {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+}

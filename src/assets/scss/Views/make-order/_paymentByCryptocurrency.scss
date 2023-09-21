@@ -1,0 +1,121 @@
+.payment-by-cryptocurrency {
+  padding-left: 32px;
+
+  &__wallets {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 5px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 8px 12px;
+    height: 48px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    transition: .25s;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: #FFFFFF;
+      border: 1px solid #EEEFF1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: .25s;
+    }
+
+    & > img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+    }
+
+    &-info {
+      line-height: 20px;
+    }
+
+    &-name {
+      font-weight: 700;
+    }
+
+    &-short-name {
+      font-weight: 600;
+      color: #4B535A;
+    }
+  }
+
+  &__net {
+    &_mt-16 {
+      margin-top: 16px;
+    }
+  }
+
+  &__wallet {
+    &-address {
+      display: flex;
+      gap: 16px 24px;
+
+      &_mt-24 {
+        margin-top: 24px;
+      }
+
+      &-content {
+        width: 100%;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+        &_mt-16 {
+          margin-top: 16px;
+        }
+
+        & > p {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          color: #262626;
+
+          & > span {
+            color: #4B535A;
+
+            &.orange {
+              color: #FF6100;
+            }
+          }
+        }
+      }
+
+      &-input {
+
+      }
+    }
+  }
+
+  &__qr-code {
+    width: 164px;
+    height: 164px;
+    flex-shrink: 0;
+    filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.05));
+    border-radius: 12px;
+
+    & > img {
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .payment-by-cryptocurrency {
+    &__wallet {
+      &-address {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

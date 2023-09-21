@@ -1,0 +1,129 @@
+.personal-information {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "surname surname avatar"
+        "email phone avatar";
+    gap: 10px;
+
+    &_mb-12 {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__surname {
+    grid-area: surname;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__email {
+    grid-area: email;
+  }
+
+  &__phone {
+    grid-area: phone;
+  }
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: avatar;
+    margin-left: auto;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background: #0462D0;
+
+    font-weight: 700;
+    font-size: 23.02px;
+    line-height: 31px;
+    color: #FFFFFF;
+    position: relative;
+
+    &-edit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 49px;
+      height: 49px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      opacity: 0;
+      transition: .25s;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    & > input {
+      display: none;
+    }
+
+    &:hover {
+      & .personal-information__avatar-edit {
+        opacity: 1;
+        transition: .25s;
+      }
+    }
+  }
+}
+
+::v-deep {
+  & .card-with-settings {
+    &__dropdown {
+      padding-right: 68px
+    }
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 850px) {
+  ::v-deep {
+    & .card-with-settings {
+      &__dropdown {
+        padding-right: 24px
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .personal-information {
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "avatar avatar"
+        "surname surname"
+        "email phone";
+    }
+
+    &__avatar {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .personal-information {
+    &__content {
+      grid-template-columns: 1fr;
+      grid-template-rows: 5fr;
+      grid-template-areas:
+        "avatar"
+        "surname"
+        "name"
+        "email"
+        "phone";
+    }
+
+    &__avatar {
+      margin: 0 auto 0 0;
+    }
+  }
+}

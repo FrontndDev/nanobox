@@ -1,0 +1,77 @@
+.doctor-how-it-works {
+  margin: 0 auto;
+
+  & > h1 {
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0 auto;
+    max-width: 855px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #4B535A;
+
+    &_mt-24 {
+      margin-top: 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 15px;
+
+    &_mt-60 {
+      margin-top: 60px;
+    }
+
+    &-item {
+      max-width: 370px;
+
+      &-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 56px;
+        height: 56px;
+        background: #FFA765;
+        border-radius: 50%;
+
+        & > svg {
+          position: relative;
+          left: -.5px;
+        }
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #262626;
+
+        &_mt-20 {
+          margin-top: 20px;
+        }
+      }
+
+      &-text {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #4B535A;
+
+        &_mt-8 {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

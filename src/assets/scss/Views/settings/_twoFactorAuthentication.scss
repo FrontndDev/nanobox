@@ -1,0 +1,11 @@
+.two-factor-authentication {
+  &__right {
+    font-weight: 600;
+    line-height: 18px;
+    color: #FF0000;
+
+    &.active {
+      color: #4F9F2A;
+    }
+  }
+}

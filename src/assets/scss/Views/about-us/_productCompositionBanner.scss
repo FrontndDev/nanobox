@@ -1,0 +1,350 @@
+.product-composition-banner {
+  display: flex;
+  align-items: center;
+  gap: 25px 45px;
+  margin-top: 80px;
+  padding: 60px 77px 57px 60px;
+  background-color: #FFFFFF;
+  background-image: url("@/assets/images/product-composition-banner-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &__left {
+    &-up {
+      max-width: 506px;
+      width: 100%;
+    }
+
+    &-down {
+      padding-top: 30px;
+      max-width: 460px;
+      width: 100%;
+    }
+  }
+
+  &__more {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #24C8BC;
+  }
+
+  &__number {
+    margin-top: -12px;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 94px;
+    color: #24C8BC;
+  }
+
+  &__percents {
+    display: flex;
+    align-items: flex-end;
+
+    &_mt-30 {
+      margin-top: 30px;
+    }
+
+    & > div {
+      &:last-child {
+        margin: 0 0 16px 8px;
+      }
+    }
+  }
+
+  &__percent {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 37px;
+    color: #24C8BC;
+
+    &-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__info {
+    padding-bottom: 30px;
+    max-width: 460px;
+    border-bottom: 1px solid #24C8BC;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+
+    &_mt-8 {
+      margin-top: 8px;
+    }
+  }
+
+  &__elements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    & > div {
+      font-weight: 600;
+      line-height: 20px;
+      color: #000000;
+    }
+
+    &_mt-16 {
+      margin-top: 16px;
+    }
+
+    &-info {
+      font-weight: 700;
+      line-height: 20px;
+
+      &_mt-20 {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 482px;
+    padding-left: 125px;
+    position: relative;
+  }
+
+  &__logo {
+    margin-top: 25px;
+  }
+
+  &__element {
+    position: absolute;
+
+    &.zinc {
+      width: 98px;
+      height: 106px;
+      box-shadow: 0 3.93613px 7.87226px rgba(0, 0, 0, 0.1);
+      border-radius: 13.1204px;
+      transform: rotate(-15deg);
+      top: -55px;
+      left: 100px;
+
+      & ::v-deep(> svg) {
+        width: 99px;
+        height: 107px;
+      }
+
+      & ::v-deep(.chemical-element__title) {
+        font-size: 11.483px;
+        line-height: 16px;
+      }
+
+      & ::v-deep(.chemical-element__name) {
+        font-size: 36.0895px;
+        line-height: 49px;
+      }
+    }
+
+    &.copper {
+      width: 92px;
+      height: 100px;
+      margin: auto 0;
+      box-shadow: 0 3.73048px 7.46096px rgba(0, 0, 0, 0.1);
+      border-radius: 12.4349px;
+      transform: rotate(15.92deg);
+      top: 21px;
+      bottom: 0;
+      left: 16px;
+
+      & ::v-deep(> svg) {
+        width: 93px;
+        height: 101px;
+      }
+
+      & ::v-deep(.chemical-element__title) {
+        font-size: 10.8831px;
+        line-height: 15px;
+      }
+
+      & ::v-deep(.chemical-element__name) {
+        font-size: 34.204px;
+        line-height: 47px;
+      }
+    }
+
+    &.magnesium {
+      width: 84px;
+      height: 91px;
+      box-shadow: 0 3.35163px 6.70326px rgba(0, 0, 0, 0.1);
+      border-radius: 10.0549px;
+      transform: rotate(-11.98deg);
+      bottom: -80px;
+      left: 110px;
+
+      & ::v-deep(> svg) {
+        width: 85px;
+        height: 92px;
+      }
+
+      & ::v-deep(.chemical-element__title) {
+        font-size: 10.0549px;
+        line-height: 14px;
+      }
+
+      & ::v-deep(.chemical-element__name) {
+        font-size: 30.7304px;
+        line-height: 42px;
+      }
+    }
+
+    &.selenium {
+      width: 82px;
+      height: 89px;
+      box-shadow: 0 3.28398px 6.56797px rgba(0, 0, 0, 0.1);
+      border-radius: 10.9466px;
+      transform: rotate(10.38deg);
+      top: -50px;
+      right: 10px;
+
+      & ::v-deep(> svg) {
+        width: 83px;
+        height: 90px;
+      }
+
+      & ::v-deep(.chemical-element__title) {
+        font-size: 9.5805px;
+        line-height: 13px;
+      }
+
+      & ::v-deep(.chemical-element__name) {
+        font-size: 30.1102px;
+        line-height: 41px;
+      }
+    }
+
+    &.gold {
+      width: 90px;
+      height: 97px;
+      margin: auto 0;
+      box-shadow: 0 3.60117px 7.20233px rgba(0, 0, 0, 0.1);
+      border-radius: 12.0039px;
+      transform: rotate(-3.95deg);
+      top: -20px;
+      bottom: 0;
+      right: -90px;
+
+      & ::v-deep(> svg) {
+        width: 91px;
+        height: 98px;
+      }
+
+      & ::v-deep(.chemical-element__title) {
+        font-size: 10.8035px;
+        line-height: 15px;
+      }
+
+      & ::v-deep(.chemical-element__name) {
+        font-size: 33.0183px;
+        line-height: 45px;
+      }
+    }
+
+    &.silver {
+      width: 80px;
+      height: 87px;
+      box-shadow: 0 3.19488px 6.38977px rgba(0, 0, 0, 0.1);
+      border-radius: 11.7146px;
+      transform: rotate(7.99deg);
+      bottom: -65px;
+      right: 0;
+
+      & ::v-deep(> svg) {
+        width: 81px;
+        height: 88px;
+      }
+
+      & ::v-deep(.chemical-element__title) {
+        font-size: 9.32057px;
+        line-height: 13px;
+      }
+
+      & ::v-deep(.chemical-element__name) {
+        font-size: 29.2932px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .product-composition-banner {
+    background-position: center;
+
+    &__right {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-composition-banner {
+    padding: 60px 50px 57px 50px;
+    background-position: center right;
+
+    &__elements {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .product-composition-banner {
+    padding: 50px 40px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .product-composition-banner {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (max-width: 389px) {
+  .product-composition-banner {
+
+    &__percents {
+      & > div:last-child {
+        margin: 0 0 0 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 342px) {
+  .product-composition-banner {
+    &__elements {
+      grid-template-columns: 1fr;
+      row-gap: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 342px) {
+  .product-composition-banner {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .product-composition-banner {
+    padding: 30px 19px;
+  }
+}

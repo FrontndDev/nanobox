@@ -1,0 +1,79 @@
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 25px;
+  padding-bottom: 24px;
+  width: 286px;
+  height: 100vh;
+  -ms-overflow-y: auto;
+  overflow-y: auto;
+  background: #F5F5F5;
+  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+
+  &.active {
+    display: flex;
+  }
+
+  &__up {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 8px 16px 18px;
+    background: #FFFFFF;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__down {
+    padding: 16px 16px 0;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 8px 0 0 8px;
+  }
+
+  & > div:last-child {
+    padding: 0 16px;
+  }
+
+  &__sidebar {
+    padding-bottom: 8px;
+    width: 100%;
+
+    &-buttons {
+      height: 40px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+
+      &_mb-8 {
+        margin-bottom: 8px;
+      }
+    }
+
+    &::v-deep {
+      & .sidebar {
+        &__networks {
+          padding: 0 38px 0 12px;
+          text-align: start;
+        }
+
+        &__line {
+          padding-right: 24px;
+        }
+      }
+    }
+  }
+}

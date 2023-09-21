@@ -1,0 +1,30 @@
+.my-referrals {
+  margin-top: 24px;
+
+  &__title {
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    &_mt-12 {
+      margin-top: 12px;
+    }
+  }
+
+  &__icon {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .my-referrals {
+    &__content {
+      row-gap: 4px;
+    }
+  }
+}

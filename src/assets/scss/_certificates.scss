@@ -1,0 +1,27 @@
+.certificates {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    &_mt-80 {
+      margin-top: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .certificates {
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .certificates {
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

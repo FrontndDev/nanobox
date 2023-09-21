@@ -1,0 +1,78 @@
+.doctor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px 30px;
+  margin-top: -42px;
+  max-width: 370px;
+  width: 100%;
+  border-radius: 12px;
+  transition: .25s;
+
+  &__info {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FF6100;
+
+    &_mt-2 {
+      margin-top: 2px;
+    }
+  }
+
+  &__name {
+    line-height: 24px;
+    text-align: center;
+
+    &_mt-22 {
+      margin-top: 22px;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #4B535A;
+    word-break: break-word;
+
+    &_mt-23 {
+      margin-top: 23px;
+    }
+  }
+
+  &__button {
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    transition: .25s;
+
+    &_mt-60 {
+      margin-top: 60px;
+    }
+  }
+
+  &:hover {
+    background: #FFFFFF;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    transition: .25s;
+    position: relative;
+    z-index: 5;
+
+    & .doctor {
+      &__button {
+        //display: flex;
+        opacity: 1;
+        transition: .25s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .doctor {
+    padding: 40px 25px 30px;
+  }
+}

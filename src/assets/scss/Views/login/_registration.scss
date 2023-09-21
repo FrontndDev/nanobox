@@ -1,0 +1,48 @@
+.registration {
+  margin-top: 20px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #262626;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    &_mt-20 {
+      margin-top: 20px;
+    }
+  }
+
+  &__conditions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #262626;
+
+    &_mt-20 {
+      margin-top: 20px;
+    }
+
+    & a {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      color: #FF6100;
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    &_mt-20 {
+      margin-top: 20px;
+    }
+  }
+}

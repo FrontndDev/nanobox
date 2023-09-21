@@ -1,0 +1,29 @@
+.appointment-form {
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__blocks {
+    row-gap: 16px;
+
+    &_mt-28 {
+      margin-top: 28px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    &_mt-30 {
+      margin-top: 30px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

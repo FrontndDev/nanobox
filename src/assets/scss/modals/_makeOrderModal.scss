@@ -1,0 +1,34 @@
+@media screen and (max-width: 550px) {
+  ::v-deep {
+    & .table {
+      &__row {
+        & > div:not([class]){
+          display: none;
+        }
+
+        & .table__product-price {
+          display: none;
+        }
+      }
+
+      &__product {
+        &-cost-info {
+          display: flex !important;
+          flex-direction: row !important;
+          justify-content: center;
+          column-gap: 20px;
+
+          & > .table__product-price,
+          & > div:not([class]) {
+            display: block;
+          }
+        }
+
+        &-image {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}

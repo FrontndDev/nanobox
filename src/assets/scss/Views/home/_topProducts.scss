@@ -1,0 +1,41 @@
+.top-products {
+  margin-top: 82px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+
+    &_mb-42 {
+      margin-bottom: 42px;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+    }
+  }
+}
+
+::v-deep {
+  /////////////////////CAROUSEL/////////////////////
+  & .carousel {
+    &__viewport {
+      padding-bottom: 19px;
+    }
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .top-products {
+    &__title {
+      &-right {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+}

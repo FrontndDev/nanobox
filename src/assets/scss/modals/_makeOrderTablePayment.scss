@@ -1,0 +1,48 @@
+.order-payment {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 36px;
+  margin-top: 30px;
+
+  &__info {
+    display: flex;
+    align-items: self-end;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+  }
+
+  & > span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #4B535A;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0;
+
+    & > span {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .order-payment {
+    & > .button {
+      max-width: 100% !important;
+      width: 100%;
+    }
+  }
+}

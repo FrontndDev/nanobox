@@ -1,0 +1,87 @@
+.delivery-address {
+  &__addresses {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 5px;
+
+    &.active {
+      column-gap: 20px;
+    }
+
+    &-icons {
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+
+      & > svg {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__change-inputs {
+    & > div:not([class]) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "select1 select1 select2 select2"
+        "input1 input1 input2 input3";
+      //grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+
+      & > div {
+        max-width: 100%;
+        width: 100%;
+
+        &:nth-child(1) {
+          grid-area: select1;
+        }
+
+        &:nth-child(2) {
+          grid-area: select2;
+        }
+
+        &:nth-child(3) {
+          grid-area: input1;
+        }
+
+        &:nth-child(4) {
+          grid-area: input2;
+        }
+
+        &:nth-child(5) {
+          grid-area: input3;
+        }
+      }
+    }
+
+    &-title {
+      padding-bottom: 4px;
+      font-size: 12px;
+      line-height: 16px;
+      color: rgb(75, 83, 90);
+    }
+  }
+
+  & ::v-deep(.select__value) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .delivery-address {
+    &__address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

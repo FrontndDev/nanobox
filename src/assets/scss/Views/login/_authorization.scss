@@ -1,0 +1,39 @@
+.authorization {
+  margin-top: 20px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #262626;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    &_mt-20 {
+      margin-top: 20px;
+    }
+  }
+
+  &__forgot-password {
+    font-weight: 600;
+    line-height: 20px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FF8830;
+    text-align: right;
+    cursor: pointer;
+
+    &_mt-12 {
+      margin-top: 12px;
+    }
+  }
+
+  &__button {
+    &_mt-20 {
+      margin-top: 20px;
+    }
+  }
+}

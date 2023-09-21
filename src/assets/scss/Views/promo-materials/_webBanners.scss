@@ -1,0 +1,38 @@
+.web-banners {
+  margin-top: 24px;
+
+  &__title {
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    &_mt-16 {
+      margin-top: 16px;
+    }
+  }
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 12px;
+
+    &-content {
+      max-width: 300px;
+      width: 100%;
+      height: 250px;
+      background: #C4C4C4;
+
+      &_mt-24 {
+        margin-top: 24px;
+      }
+    }
+  }
+}
